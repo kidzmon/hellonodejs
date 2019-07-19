@@ -3,7 +3,7 @@ steps:
           args : ['build', '-t', 'gcr.io/hellonodejs/hellonodejs-test', '.']
           timeout : 500s
         - name : 'gcr.io/cloud-builders/docker'
-          args : ['push', 'gcr.io/hellonoejs/hellonodejs-test']
+          args : ['push', 'gcr.io/hellonodejs/hellonodejs-test']
 options:
         machineType: 'N1_HIGHCPU_8'
 timeout : 1000s
