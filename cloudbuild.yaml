@@ -2,6 +2,7 @@ steps:
         - name : 'gcr.io/cloud-builders/docker'
           args : ['build', '-t', 'gcr.io/hellonodejs/hellonodejs-test', '.']
           timeout : 500s
+          waitFor: ['-']
         - name : 'gcr.io/cloud-builders/docker'
           args : ['push', 'gcr.io/hellonodejs/hellonodejs-test']
 options:
